@@ -288,6 +288,9 @@ section{
     transition: 0.3s ease-in-out;
 }
 
+.project-card p{
+    text-align: justify;
+}
 .project-card:hover{
     background-color: black;
     color: white;
