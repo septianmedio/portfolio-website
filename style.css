@@ -8,7 +8,7 @@
     list-style: none;
 }
 
-header{
+header {
     position: fixed;
     top: 1rem;
     left: 50%;
@@ -25,12 +25,12 @@ header{
     z-index: 1000;
 }
 
-.navbar{
+.navbar {
     display: flex;
     align-items: center;
 
 }
-.logo{
+.logo {
     color: white;
     font-size: 1.3rem;
     font-weight: 600;
@@ -39,11 +39,11 @@ header{
     margin-right: 3rem;
 
 }
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
 
-.logo span{
+.logo span {
     font-weight: 600;
     background: linear-gradient(to right, rgb(255, 0, 255),
      rgb(0, 157, 255));
@@ -51,18 +51,18 @@ header{
      color: transparent;
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     gap: 2rem;
 }
 
-li a{
+.nav-links a {
     position: relative;
     color: white;
     font-weight: 300;
 }
 
-li a:before{
+.nav-links a::before {
     position: absolute;
     content: '';
     width: 0;
@@ -75,11 +75,11 @@ li a:before{
      rgb(255, 0, 255));
 
 }
-li a:hover::before{
+.nav-links a:hover::before {
     width: 100%;
 }
 
-.visit-btn{
+.visit-btn {
     padding: 0.8rem 1.5rem;
     border-radius: 3rem;
     border: none;
@@ -89,49 +89,51 @@ li a:hover::before{
     color: #fff;
     cursor: pointer;
     text-wrap: nowrap;
-    transition: 0.3 ease-in-out;
+    transition: 0.3s ease-in-out;
     background: linear-gradient(to right, rgb(0, 157, 255),
      rgb(255, 0, 255));
 }
 
-.visit-btn:hover{
+.visit-btn:hover {
     transform: scale(1.03);
     background: linear-gradient(to right, rgb(255, 0, 255),
      rgb(0, 157, 255));
 }
 
-#menu-icon{
+#menu-icon {
     font-size: 2rem;
     display: none;
 }
 
-section{
+section {
     min-height: 100vh;
     padding: 8rem 12%;
     width: 100%;
     position: relative;
 }
 
-.about{
+.about {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 }
 
-.about .about-container{
+.about .about-container {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10rem;
 }
 
-.about img{
+
+
+.about img {
     width: 30vw;
     border-radius: 50%;
 }
 
-.info-box{
+.info-box {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -140,17 +142,17 @@ section{
     gap: 1.5rem;
 }
 
-.info-box h3{
+.info-box h3 {
     font-size: 1.8rem;
     font-weight: 500;
     opacity: 0.8;
 }
-.info-box h1{
+.info-box h1 {
     font-size: 4rem;
     font-weight: 600;
 }
 
-.info-box span{
+.info-box span {
     background: linear-gradient(to right, rgb(255, 0, 255),
      rgb(0, 157, 255));
      background-clip: text;
@@ -158,13 +160,13 @@ section{
      font-size: 2rem;
 }
 
-.btn-group{
+.btn-group {
     display: flex;
     gap: 1rem;
    
 }
 
-.btn{
+.btn {
     border-radius: 3rem;
     padding: 0.5rem 1.5rem;
     border: 2px solid black;
@@ -175,56 +177,126 @@ section{
     color: #333;
 }
 
-.btn a:link, a:visited, a:hover, a:active {
-  color: inherit;
-}
-.btn:hover{
+.btn:hover {
     background-color: black;
     color: white;
 }
 
-.socials{
+.socials {
     display: flex;
     gap: 2rem;
     color: #333;
 }
 
-.socials i{
+.socials i {
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
 }
 
-.socials i:hover{
+.socials i:hover {
     transform: scale(1.1);
 }
 
-.section-title{
+
+.section-title {
     text-align: center;
     font-size: 4rem;
     font-weight: 600;
     margin-bottom: 1rem;
 }
 
-.experience-info{
+.experience-info {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5rem;
 }
 
-.experience img{
-    width: 24vw;
+.tech-stack {
+    min-width: 280px;
+    padding: 2rem;
+    border: 2px solid black;
     border-radius: 3rem;
+    transition: 0.2s ease-in-out;
+    
+}
+.tech-stack:hover{
+    transform: scale(1.02);
+    background-color: black;
+    color: white;
+}
+.tech-stack h2 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(to right, #009dff, #ff00ff);
+    background-clip: text;
+    color: transparent;
 }
 
-.grid{
+.tech-icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.tech-item i {
+    font-size: 3rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.tech-item:hover i {
+    transform: scale(1.15);
+}
+
+.tech-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    
+}
+
+/* Tech brand colors */
+
+.html-icon {
+    color: #e34f26;
+}
+
+.css-icon {
+    color: #1572b6;
+}
+
+.js-icon {
+    color: #f7df1e;
+}
+
+.react-icon {
+    color: #61dafb;
+}
+
+.git-icon {
+    color: #f05032;
+}
+
+.github-icon {
+    color: #181717;
+}
+
+.grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 2rem;
 }
 
-.grid-card{
+.grid-card {
     border: 2px solid black;
     border-radius: 3rem;
     padding: 3rem;
@@ -236,18 +308,18 @@ section{
     transition: 0.2s ease-in-out;
 }
 
-.grid-card:hover{
+.grid-card:hover {
     transform: scale(1.02);
     background-color: black;
     color: white;
 }
 
-.grid-card i{
+.grid-card i {
     font-size: 1.5rem;
     margin-bottom: 1rem;
 }
 
-.grid-card span{
+.grid-card span {
     font-size: 1.5rem;
     font-weight: 500;
     background: linear-gradient(to right, #009dff, #ff00ff);
@@ -255,26 +327,26 @@ section{
     color: transparent;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     width: 20px;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: rgb(219, 219, 219);
 
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, #009dff, #ff00ff);
 }
 
-.projects-grid{
+.projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
     gap: 2rem;
 }
 
-.project-card{
+.project-card {
     padding: 3rem 2rem;
     display: flex;
     flex-direction: column;
@@ -288,37 +360,37 @@ section{
     transition: 0.3s ease-in-out;
 }
 
-.project-card p{
+.project-card p {
     text-align: justify;
 }
-.project-card:hover{
+.project-card:hover {
     background-color: black;
     color: white;
     transform: translateY(-10px)scale(1.02);
 }
 
-.project-card img{
+.project-card img {
     width: 20vw;
     border-radius: 1rem;
 }
 
-.project-card:hover .btn{
+.project-card:hover .btn {
     border: 2px solid white;
     color: white;
 }
 
-.project-card:hover .btn:hover{
+.project-card:hover .btn:hover {
     border: 2px solid white;
     background-color: white;
     color: black;
 }
 
-.project-card h3{
+.project-card h3 {
     font-size: 2rem;
     font-weight: 500;
 }
 
-.input-box{
+.input-box {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -328,22 +400,22 @@ section{
     margin-top: 5rem;
 }
 
-.input-box input{
+.input-box input {
     border-radius: 3rem;
     border: 2px solid black;
     padding: 2rem 8rem;
     font-size: 3rem;
 }
 
-.input-box input::placeholder{
+.input-box input::placeholder {
     font-size: 3rem;
 }
 
-.input{
+.input {
     position: relative;
 }
 
-.input i{
+.input i {
     position: absolute;
     font-size: 3rem;
     top: 50%;
@@ -351,7 +423,11 @@ section{
     transform: translate(50%, -50%);
 }
 
- footer{
+.input-box .btn {
+    font-size: 25px;
+}
+
+ footer {
     bottom: 0;
     left: 0;
     height: 10rem;
@@ -363,100 +439,98 @@ section{
     justify-content: center;
  }
 
- footer ul{
+ footer ul {
     display: flex;
     align-items: center;
     gap: 3rem;
  }
- footer ul li a{
+
+ footer ul li a {
     color: black;
     font-weight: 600;
  }
 
- .copyright{
-    font-size: 300;
+ .copyright {
+    font-weight: 300; 
     margin-top: 2rem;
  }
 
 
- @media(max-width:1280px){
-    header{
+ @media(max-width:1280px) {
+    header {
         padding: 1rem 2rem;
         gap: 2rem;
     }
-    .about .about-container{
+    .about .about-container {
         gap: 3rem;
     }
-    .experience-info{
+    .experience-info {
         flex-direction: column;
     }
-    .experience img{
-        display: none;
-    }
-
-    .grid-card{
+    .grid-card {
         flex-direction: column;
     }
 
-    .project-card img{
+    .project-card img {
         width: 30vw;
     }   
     
-    .input-box input{
+    .input-box input {
         padding: 2rem 5rem;
         font-size: 2.5rem;
     }
-    .input input::placeholder{
+    .input input::placeholder {
         font-size: 2.5rem;
     }
-    .input-box i{
+    .input-box i {
         font-size: 2rem
     }
  
 }
+
  
- @media(max-width:768px){
-    header{
+ @media(max-width:768px) {
+    header {
         padding: 1rem 1rem;
         gap: 1rem;
     }
-    header .logo{
+    header .logo {
         font-size: 1rem;
     }
-    header .visit-btn{
+    header .visit-btn {
         display: none;
     }
 
-    .about img{
+    .about img {
         width: 50vw;
     }
-    .about-container{
+    .about-container {
         flex-direction: column;
     }
-    .input-box input{
+    .input-box input {
         padding: 1rem 2rem;
         font-size: 1.8rem;
     }
 
-    .input input::placeholder{
+    .input input::placeholder {
         font-size: 1.5rem;
     }
 
-    .input i{
+    .input i {
         display: none;
     }
 
-    .grid{
+    .grid {
         grid-template-columns: repeat(1,1fr);
     }
     
 }
 
- @media(max-width:600px){
-    header #menu-icon{
+ @media(max-width:600px) {
+    header #menu-icon {
         display: block;
     }
-    .nav-links{
+    .nav-links {
         position: absolute;
         top: 100%;
         margin-top: 1rem;
@@ -468,47 +542,55 @@ section{
         text-align: center;
         background: rgba(0 , 0, 0, 0.9);
         border-radius: 3rem;
-        display: none;
     
     }
-    .nav-links li{
+    .nav-links li {
         margin-top: 1.5rem;
         padding: 1rem;
     }
 
-    .navbar i{
+    .navbar i {
         cursor: pointer;
     }
   
     .nav-links.active {
-        display: block;
+        display: flex;
+    }
+    
+    header {
+    width: calc(100% - 2rem);
+    padding: 1rem 1.5rem;
+    }
+    .navbar {
+    width: 100%;
+    justify-content: space-between;
     }
 
-    header{
-        padding: 1rem 5rem;
-        gap: 8rem;
-    }
-
-    header .logo{
+    header .logo {
         font-size: 1.5rem;
     }
 
-    .info-box{
+    .info-box {
         gap: 1rem;
     }
 
-    .about-container img{
+    .about-container img {
         width: 80vw;
     }
-    .input-box input{
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .input-box input {
         padding: 0.5rem 3rem;
         width: 80%;
         font-size: 1.5rem;
     }
-    .input-box input::placeholder{
+    .input-box input::placeholder {
         font-size: 1.5rem;
     }
-    footer ul{
+    footer ul {
         gap: 1rem;
     }
 

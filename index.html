@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>My Portofolio</title>
+        <title>Septian Medio | Frontend Developer</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,6 @@
         <header class="header">
             <nav class="navbar">
                 <a href="#" class="logo">septian<span>Medio</span></a>
-
                 <ul class="nav-links">
                     <li>
                         <a href="#about">About</a>
@@ -36,20 +35,18 @@
                     </li>
                 </ul>
 
-                <i class="fa-solid fa-bars" id="menu-icon"></i>
+                <button class="menu-toggle" id="menu-icon" aria-label="Open navigation menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
 
-                <a href="https://www.dicoding.com/users/septianmedio/academies">
-                    <button class="visit-btn">Visit Dicoding</button>
-                </a>
+                <a href="https://www.dicoding.com/users/septianmedio/academies" class="visit-btn">Visit Dicoding</a>
             </nav>
         </header>
 
         <main>
             <section id="about" class="about">
                 <div class="about-container">
-                    <aside>
-                        <img src="img/img.png" alt="">
-                    </aside>
+                    <img src="img/img.png" alt="">
 
                     <div class="info-box">
 
@@ -60,60 +57,85 @@
                         </div>
 
                         <div class="btn-group">
-                            <a href="pdf/septianmedio_cv.pdf" download="septianmedio_cv.pdf">
-                                <div class="btn">Download CV</div>
-                            </a>
-                            <a href="mailto:septianmedio96@gmail.com">
-                                <div class="btn">Contact</div>
-                            </a>
+                            <a href="pdf/septianmedio_cv.pdf" download="septianmedio_cv.pdf" class="btn">Download CV</a>
+                            <a href="mailto:septianmedio96@gmail.com" class="btn">Contact</a>
                         </div>
 
                         <div class="socials">
-                            <a href="https://github.com/septianmedio">
-                                <i class="fa-brands fa-github"></i>
+                            <a href="https://github.com/septianmedio" aria-label="Visit my GitHub profile">
+                                <i class="fa-brands fa-github" aria-hidden="true"></i>
                             </a>
-                            <a href="https://www.linkedin.com/in/septianmedio">
-                                <i class="fa-brands fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/septianmedio" aria-label="Visit my Linkedin profile">
+                                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
                             </a>
                         </div>
 
                     </div>
+                    
                 </div>
             </section>
 
             <section id="experience" class="experience">
-
                 <h2 class="section-title">Experience</h2>
-
                 <div class="experience-info">
                     <div class="grid">
-                        <div class="grid-card">
+                        <article class="grid-card">
                             <i class="fa-solid fa-code"></i>
                             <span>Frontend Development</span>
-                            <h3>2 month</h3>
+                            <h3>2 months</h3>
                             <p>KodingUp</p>
-                        </div>
-                        <div class="grid-card">
+                        </article>
+                        <article class="grid-card">
                             <i class="fa-solid fa-file-code"></i>
                             <span>UI/UX Design System</span>
-                            <h3>5 month</h3>
+                            <h3>5 months</h3>
                             <p>PT Special Skill Indonesia</p>
-                        </div>
-                        <div class="grid-card">
+                        </article>
+                        <article class="grid-card">
                             <i class="fa-solid fa-laptop"></i>
                             <span>Inventory & Warehouse Management</span>
                             <h3>9 years</h3>
                             <p>PT PLN Nusantara Power Services</p>
-                        </div>
-                        <div class="grid-card">
+                        </article>
+                        <article class="grid-card">
                             <i class="fa-solid fa-bolt"></i>
                             <span>Power Plant Operation</span>
                             <h3>2 years</h3>
                             <p>PT PLN Nusantara Power Services</p>
-                        </div>
+                        </article>
                     </div>
+                    <aside class="tech-stack">
+                        <h2>Tech Stack</h2>
+                        <div class="tech-icons">
+                            <div class="tech-item">
+                                <i class="fa-brands fa-html5 html-icon"></i>
+                                <span>HTML</span>
+                            </div>
 
-                    <img src="img/img.png" alt="">
+                            <div class="tech-item">
+                                <i class="fa-brands fa-css3-alt css-icon"></i>
+                                <span>CSS</span>
+                            </div>
+
+                            <div class="tech-item">
+                                <i class="fa-brands fa-js js-icon"></i>
+                                <span>JavaScript</span>
+                            </div>
+
+                            <div class="tech-item">
+                                <i class="fa-brands fa-react react-icon"></i>
+                                <span>React</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fa-brands fa-git-alt git-icon"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fa-brands fa-github github-icon"></i>
+                                <span>GitHub</span>
+                            </div>
+                        </div>
+                    </aside>
                 </div>
             </section>
 
@@ -121,32 +143,32 @@
                 <h2 class="section-title">Recent Projects</h2>
                 <div class="projects-grid">
                     <article class="project-card">
-                        <img src="img/project1.png" alt="">
+                        <img src="img/project1.png" alt="Matrix Material Management and Tracking System">
                         <h3>MATRIX</h3>
                         <p>MATRIX (Material Management and Tracking System) is a mobile inventory app for tracking materials, stock, and assets accurate and effectively.</p>
                         <div class="btn-group">
-                            <div class="btn">Live Demo</div>
-                            <div class="btn">Github Repo</div>
+                            <a href="https://www.appsheet.com/newshortcut/44d3ce4d-11e3-48b9-a733-5fcac44b7b8f" class="btn">Live Demo</a>
+                            <a href="https://github.com/septianmedio" class="btn">GitHub Repo</a>
                         </div>
                     </article>
 
                     <article class="project-card">
-                        <img src="img/project2.png" alt="">
+                        <img src="img/project2.png" alt="Tentang Rasa Coffee and Bakery website">
                         <h3>Tentang Rasa</h3>
                         <p>A responsive web and mobile solution for Tentang Rasa Coffee & Bakery, built to simplify digital ordering, payments, and customer engagement.</p>
                         <div class="btn-group">
-                            <div class="btn">Live Demo</div>
-                            <div class="btn">Github Repo</div>
+                            <a href="https://septianmedio.github.io/tentangrasa.coffee/" class="btn">Live Demo</a>
+                            <a href="https://github.com/septianmedio" class="btn">GitHub Repo</a>
                         </div>
                     </article>  
 
                     <article class="project-card">
-                        <img src="img/project3.png" alt="">
-                        <h3>My Portofolio</h3>
+                        <img src="img/project3.png" alt="Septian Medio portfolio website">
+                        <h3>My Portfolio</h3>
                         <p>A responsive portfolio website showcasing my skills, projects, and professional growth. Act as an interactive resume to initiate professional collaborations.</p>
                         <div class="btn-group">
-                            <div class="btn">Live Demo</div>
-                            <div class="btn">Github Repo</div>
+                            <a href="https://septianmedio.github.io/portofolio-website" class="btn">Live Demo</a>
+                            <a href="https://github.com/septianmedio" class="btn">GitHub Repo</a>
                         </div>
                     </article>
                 </div>
@@ -154,15 +176,20 @@
 
 
             <section id="contact" class="contact">
-                <div class="input-box">
+                <form class="input-box">
                     <h2 class="section-title">Contact Me</h2>
                     <div class="input">
-                        <input type="text" placeholder="example@email.com">
-                        <i class="fa-solid fa-envelope"></i>
+                        <label for="email" class="sr-only"></label>
+                        <input 
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                     </div>
 
-                    <div class="btn">Submit</div>
-                </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
             </section>
         </main>
 
