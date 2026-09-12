@@ -100,11 +100,6 @@ header {
      rgb(0, 157, 255));
 }
 
-#menu-icon {
-    font-size: 2rem;
-    display: none;
-}
-
 section {
     min-height: 100vh;
     padding: 8rem 12%;
@@ -185,13 +180,14 @@ section {
 .socials {
     display: flex;
     gap: 2rem;
-    color: #333;
+    
 }
 
 .socials i {
     font-size: 2.5rem;
     cursor: pointer;
     transition: 0.2s ease-in-out;
+    color: #333;
 }
 
 .socials i:hover {
@@ -234,6 +230,15 @@ section {
     background: linear-gradient(to right, #009dff, #ff00ff);
     background-clip: text;
     color: transparent;
+}
+
+.aside-profile {
+    display: block;
+    width: 120px;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
 }
 
 .tech-icons {
@@ -474,6 +479,11 @@ section {
     .project-card img {
         width: 30vw;
     }   
+    .tech-icons {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 2rem;
+    }
     
     .input-box input {
         padding: 2rem 5rem;
@@ -526,24 +536,41 @@ section {
     
 }
 
- @media(max-width:600px) {
-    header #menu-icon {
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    .menu-toggle {
         display: block;
     }
+
     .nav-links {
         position: absolute;
         top: 100%;
-        margin-top: 1rem;
+        left: 0;
         width: 100%;
+        margin-top: 1rem;
         padding: 1rem;
-        color: white;
-        display: flex;
+
+        display: none;
         flex-direction: column;
+
         text-align: center;
-        background: rgba(0 , 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.9);
         border-radius: 3rem;
-    
     }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
     .nav-links li {
         margin-top: 1.5rem;
         padding: 1rem;
@@ -553,9 +580,6 @@ section {
         cursor: pointer;
     }
   
-    .nav-links.active {
-        display: flex;
-    }
     
     header {
     width: calc(100% - 2rem);
@@ -577,6 +601,11 @@ section {
     .about-container img {
         width: 80vw;
     }
+    .tech-icons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
 
     .projects-grid {
         grid-template-columns: 1fr;
@@ -593,6 +622,7 @@ section {
     footer ul {
         gap: 1rem;
     }
-
+ 
 
 }
+
