@@ -8,6 +8,49 @@
     list-style: none;
 }
 
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.about-container,
+.experience-info,
+.grid,
+.tech-stack,
+.projects-grid,
+.project-card,
+.input-box {
+    min-width: 0;
+    max-width: 100%;
+}
+
+body {
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(160, 239, 242, 0.45),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 90%,
+            rgba(227, 194, 236, 0.45),
+            transparent 40%
+        ),
+        #f8fbff;
+
+}
+
+section {
+    background: transparent;
+}
+
 header {
     position: fixed;
     top: 1rem;
@@ -30,6 +73,7 @@ header {
     align-items: center;
 
 }
+
 .logo {
     color: white;
     font-size: 1.3rem;
@@ -39,6 +83,7 @@ header {
     margin-right: 3rem;
 
 }
+
 .logo:hover {
     transform: scale(1.1);
 }
@@ -75,6 +120,7 @@ header {
      rgb(255, 0, 255));
 
 }
+
 .nav-links a:hover::before {
     width: 100%;
 }
@@ -121,8 +167,6 @@ section {
     gap: 10rem;
 }
 
-
-
 .about img {
     width: 30vw;
     border-radius: 50%;
@@ -142,6 +186,7 @@ section {
     font-weight: 500;
     opacity: 0.8;
 }
+
 .info-box h1 {
     font-size: 4rem;
     font-weight: 600;
@@ -194,7 +239,6 @@ section {
     transform: scale(1.1);
 }
 
-
 .section-title {
     text-align: center;
     font-size: 4rem;
@@ -217,11 +261,13 @@ section {
     transition: 0.2s ease-in-out;
     
 }
+
 .tech-stack:hover{
     transform: scale(1.02);
     background-color: black;
     color: white;
 }
+
 .tech-stack h2 {
     margin-bottom: 2rem;
     font-size: 1.8rem;
@@ -230,15 +276,6 @@ section {
     background: linear-gradient(to right, #009dff, #ff00ff);
     background-clip: text;
     color: transparent;
-}
-
-.aside-profile {
-    display: block;
-    width: 120px;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border-radius: 50%;
-    margin: 0 auto 1.5rem;
 }
 
 .tech-icons {
@@ -268,8 +305,6 @@ section {
     font-weight: 500;
     
 }
-
-/* Tech brand colors */
 
 .html-icon {
     color: #e34f26;
@@ -460,7 +495,6 @@ section {
     margin-top: 1rem;
  }
 
-
  @media(max-width:1280px) {
     header {
         padding: 1rem 2rem;
@@ -475,7 +509,10 @@ section {
     .grid-card {
         flex-direction: column;
     }
-
+    .tech-stack {
+        width: 100%;
+        min-width: 0;
+    }
     .project-card img {
         width: 30vw;
     }   
@@ -498,25 +535,78 @@ section {
  
 }
 
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
  
  @media(max-width:768px) {
+    .menu-toggle {
+        display: block;
+    }
+
     header {
         padding: 1rem 1rem;
         gap: 1rem;
     }
+
     header .logo {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
-    header .visit-btn {
+
+    .visit-btn {
         display: none;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        margin-top: 1rem;
+        padding: 1rem;
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 3rem;
+    }
+
+    .nav-links.active {
+        display: flex;
     }
 
     .about img {
         width: 50vw;
     }
+
     .about-container {
         flex-direction: column;
     }
+
+    .about-container,
+    .experience-info,
+    .grid,
+    .tech-stack,
+    .projects-grid {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .tech-icons {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
     .input-box input {
         padding: 1rem 2rem;
         font-size: 1.8rem;
@@ -531,23 +621,44 @@ section {
     }
 
     .grid {
-        grid-template-columns: repeat(1,1fr);
+        grid-template-columns: 1fr;
+    }
+
+    .grid-card {
+        min-width: 0;
     }
     
 }
 
-.menu-toggle {
-    display: none;
-    border: none;
-    background: transparent;
-    color: white;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
 @media (max-width: 600px) {
-    .menu-toggle {
-        display: block;
+    section {
+        min-height: auto;
+        padding: 8rem 1.5rem;
+    }
+
+     .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        font-size: 1.8rem;
+    }
+
+    header {
+        width: calc(100% - 2rem);
+        padding: 0.75rem 1.25rem;
+        border-radius: 3rem;
+    }
+
+    header .logo {
+        font-size: 1.35rem;
+        margin-right: 0;
+    }
+
+    .navbar {
+        width: 100%;
+        justify-content: space-between;
     }
 
     .nav-links {
@@ -557,12 +668,10 @@ section {
         width: 100%;
         margin-top: 1rem;
         padding: 1rem;
-
         display: none;
         flex-direction: column;
-
         text-align: center;
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.8);
         border-radius: 3rem;
     }
 
@@ -570,59 +679,105 @@ section {
         display: flex;
     }
 
-
-    .nav-links li {
-        margin-top: 1.5rem;
-        padding: 1rem;
-    }
-
-    .navbar i {
-        cursor: pointer;
-    }
-  
-    
-    header {
-    width: calc(100% - 2rem);
-    padding: 1rem 1.5rem;
-    }
-    .navbar {
-    width: 100%;
-    justify-content: space-between;
-    }
-
-    header .logo {
-        font-size: 1.5rem;
-    }
-
-    .info-box {
-        gap: 1rem;
+    .about-container {
+        width: 100%;
+        flex-direction: column;
+        gap: 2.5rem;
     }
 
     .about-container img {
-        width: 80vw;
+    width: min(80vw, 320px);
+    height: auto;
     }
+
+    .info-box {
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .info-box h3 {
+        font-size: 1.5rem;
+    }
+
+    .info-box h1 {
+        font-size: clamp(2.5rem, 12vw, 3.5rem);
+        line-height: 1.1;
+    }
+
+    .info-box span {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: clamp(2.5rem, 11vw, 3.5rem);
+        line-height: 1.1;
+    }
+
+    .experience-info,
+    .grid,
+    .tech-stack {
+        width: 100%;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-card {
+        width: 100%;
+        min-width: 0;
+        padding: 2rem;
+    }
+
+     .tech-stack {
+        min-width: 0;
+    }
+
     .tech-icons {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .projects-grid {
+        width: 100%;
         grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        width: 100%;
+        min-width: 0;
+        padding: 2rem 1.5rem;
+    }
+
+    .project-card img {
+        width: 100%;
+        max-width: 320px;
+        height: auto;
+    }
+
+    .input-box,
+    .input {
+        width: 100%;
     }
 
     .input-box input {
         padding: 0.5rem 3rem;
-        width: 80%;
+        width: 100%;
         font-size: 1.5rem;
+        text-align: center;
     }
     .input-box input::placeholder {
         font-size: 1.5rem;
+        text-align: center;
     }
     footer ul {
         gap: 1rem;
     }
- 
 
 }
 
+@media (max-width: 400px) {
+    .tech-icons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
